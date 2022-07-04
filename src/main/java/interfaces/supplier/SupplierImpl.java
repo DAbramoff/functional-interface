@@ -1,9 +1,12 @@
 package interfaces.supplier;
 
+import java.util.Date;
+
 public class SupplierImpl {
-    public static void main(String[] args) {
-        Supplier<String> stringSupplier = (x)-> "Новая строка № " + x;
-        System.out.println(stringSupplier.get(1));
-        System.out.println(stringSupplier.get(2));
+    public static void main(String[] args) throws InterruptedException {
+        Supplier<String> stringSupplier = ()-> "Текущее время " + new Date();
+        System.out.println(stringSupplier.get());
+        Thread.sleep(10000);
+        System.out.println(stringSupplier.get());
     }
 }

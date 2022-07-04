@@ -1,5 +1,5 @@
 package interfaces.supplier;
 
 public interface Supplier<T> {
-    T get(int index);
+    T get();
 }
